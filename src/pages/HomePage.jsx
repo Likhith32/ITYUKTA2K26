@@ -25,6 +25,7 @@ import lalityaImg from '../assets/lalitya.jpeg'
 import sarojImg from '../assets/Saroj.jpeg'
 import deekshithaImg from '../assets/deekshitha.jpeg'
 import jkImg from '../assets/jk.jpeg'
+import dharaniImg from '../assets/dharani.jpeg'
 
 
 /* ──────────── DATA ──────────── */
@@ -38,7 +39,7 @@ const TEAM_MEMBERS = [
     { name: "Deekshitha", role: "Flash Mob Co-ordinator", img: deekshithaImg },
     { name: "Shabira", role: "Flash Mob Co-ordinator", img: null },
     { name: "Hemanth", role: "Flash Mob Co-ordinator", img: null },
-    { name: "Dharani", role: "Flash Mob Co-ordinator", img: null },
+    { name: "Dharani", role: "Flash Mob Co-ordinator", img: dharaniImg },
     { name: "Surendar Reddy", role: "Cultural Co-ordinator", img: suriImg },
     { name: "Saroj", role: "Cultural Co-ordinator", img: sarojImg },
     { name: "Madhu Sarvani", role: "Cultural Co-ordinator", img: madhuImg },
