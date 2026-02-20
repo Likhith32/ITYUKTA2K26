@@ -3403,8 +3403,6 @@ a {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     box-shadow: var(--shadow-card);
 }
 
@@ -4027,15 +4025,12 @@ a.event-card {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: blur(4px);
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
 }
 
 /* Staggered reveal for grid items */
@@ -5258,17 +5253,14 @@ a.event-card {
     0% {
         opacity: 0;
         transform: translateY(60px) rotateX(-40deg) scale(0.5);
-        filter: blur(8px);
     }
 
     60% {
-        filter: blur(2px);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0) rotateX(0deg) scale(1);
-        filter: blur(0);
     }
 }
 
