@@ -27,6 +27,7 @@ import deekshithaImg from '../assets/deekshitha.jpeg'
 import jkImg from '../assets/jk.jpeg'
 import dharaniImg from '../assets/dharani.jpeg'
 import sravanImg from '../assets/sravan.jpeg'
+import shabiraImg from '../assets/shabira.jpeg'
 
 
 /* ──────────── DATA ──────────── */
@@ -38,7 +39,7 @@ const TEAM_MEMBERS = [
     { name: "Lavanya", role: "Non-Tech Co-ordinator", img: lavanyaImg },
     { name: "Jayakumar", role: "Flash Mob Co-ordinator", img: jkImg },
     { name: "Deekshitha", role: "Flash Mob Co-ordinator", img: deekshithaImg },
-    { name: "Shabira", role: "Flash Mob Co-ordinator", img: null },
+    { name: "Shabira", role: "Flash Mob Co-ordinator", img: shabiraImg },
     { name: "Hemanth", role: "Flash Mob Co-ordinator", img: null },
     { name: "Dharani", role: "Flash Mob Co-ordinator", img: dharaniImg },
     { name: "Surendar Reddy", role: "Cultural Co-ordinator", img: suriImg },
@@ -482,7 +483,7 @@ export default function HomePage() {
         </h2>
 
         <p className="reveal">
-ITYUKTA is not just an event — it is an Innovation Hub where technology empowers, collaboration thrives, and young minds ignite with creativity. It provides students with a dynamic platform to explore current trends and transform themselves through emerging technologies. Beyond being a space for technical learning, ITYUKTA fosters excitement, creativity, and complete fun, creating an environment where innovation and enthusiasm go hand in hand. Through its diverse events and engaging activities, ITYUKTA enhances students’ technical skills while nurturing teamwork, leadership, and problem-solving abilities. ITYUKTA 2K26 equips participants with cutting-edge competencies, transforming theoretical knowledge into real-world expertise and serving as a launchpad for innovators, tech enthusiasts, and future industry leaders. By bridging the gap between academia and industry, ITYUKTA stands as a place where ideas flourish, knowledge turns into action, and innovation drives the future.        </p>
+ITYUKTA is not just an event — it is an Innovation Hub where technology empowers, collaborates & ignites with the minds of students. Ityukta makes students to learn the current trends and innovates themselves with the recent trends. ITYUKTA is not only a place to learn the technology but also filled with complete fun and to enhance student technical skills with events conducted in the ITYUKTA.ITYUKTA 2k26 equips students with cutting-edge skills, transforming theoretical knowledge into real-world expertise. It serves as a launchpad for innovators, problem-solvers, and tech enthusiasts, bridging the gap between academia and industry.ITYUKTA is a place flurish turns the knowledge into action & innovation dives the future!        </p>
 
         <div className="about-vision-box reveal">
           <h4 className="about-vision-label">Our_Vision</h4>

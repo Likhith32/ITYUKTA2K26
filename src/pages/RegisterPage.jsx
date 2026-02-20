@@ -6,47 +6,35 @@ import Footer from '../components/Footer'
 const registrationOptions = [
     {
         icon: '⚡',
-        title: 'General Registration - 1 Day',
+        title: 'General Registration',
+        duration: '1 Day',
         price: '₹100',
-      
-        features: [
-           
-            
-        ],
+        features: [],
         link: 'https://forms.gle/vLdWw5R9m5xJGJ7t9',
     },
     {
         icon: '🚀',
-        title: 'General Registration - 2 Days',
+        title: 'General Registration',
+        duration: '2 Days',
         price: '₹200',
-       
-        features: [
-           
-            
-        ],
+        features: [],
         link: 'https://forms.gle/Um8L8CyU2ZZ3Yrx7A',
     },
     {
         icon: '🏨',
-        title: 'General Registration with Accommodation - 1 Day',
+        title: 'General Registration with Accommodation',
+        duration: '1 Day',
         price: '₹300',
-       features: [
-        
-    ],
-    
+        features: [],
         link: 'https://forms.gle/VdY1DyvQ5y9PPCh2A',
     },
     {
         icon: '👑',
-        title: 'General Registration with Accommodation - 2 Days',
+        title: 'General Registration with Accommodation',
+        duration: '2 Days',
         price: '₹500',
-       features: [
-       
-        
-    ],
-            link: 'https://forms.gle/XrBwGQNZdMZY8mBE9',
-
-        
+        features: [],
+        link: 'https://forms.gle/XrBwGQNZdMZY8mBE9',
     },
 ]
 
@@ -85,6 +73,7 @@ function TiltCard({ option }) {
             <div className="card-content">
                 <div className="register-icon">{option.icon}</div>
                 <h3>{option.title}</h3>
+                {option.duration && <div className="register-duration">{option.duration}</div>}
                 <div className="price-wrapper">
                     <img src="/images/blast.png" className="price-blast" alt="Price Tag" />
                     <span className="price-text">{option.price}</span>
