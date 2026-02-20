@@ -5739,9 +5739,9 @@ a.event-card {
 }
 
 .sponsor-item span {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
