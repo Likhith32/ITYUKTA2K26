@@ -28,7 +28,7 @@ export const EVENTS = {
     },
 
     'dumb-smash': {
-        name: 'Dumb Smash',
+        name: 'Lip Sync Battle',
         icon: '🤪',
         category: 'non-technical',
         registrationUrl: 'https://forms.gle/WWH6r1RF8TX1Z1ru5',
@@ -160,7 +160,7 @@ export const EVENTS = {
     },
 
     'movie-mania': {
-        name: 'Movie Mania',
+        name: 'Cine Crage',
         icon: '🎬',
         category: 'non-technical',
         registrationUrl: 'https://forms.gle/fYe4zPF6RxT8fDk47',
@@ -183,8 +183,8 @@ export const EVENTS = {
 
     
     'meme-matrice': {
-        name: 'Meme Matrice',
-        icon: '😂',
+        name: 'Bottle Bash',
+        icon: '🍾',
         category: 'non-technical',
         registrationUrl: 'https://forms.gle/eAW3KZnS54EJPtkt6',
         description: 'Create the funniest memes and win!',
@@ -203,6 +203,49 @@ export const EVENTS = {
             'Audience voting determines the winner'
         ]
     },
+'colour-clash': {
+    name: 'Colour Clash',
+    icon: '🎨',
+    category: 'non-technical',
+    registrationUrl: 'https://forms.gle/yourColourClashLink',
+    description: 'Test your creativity with colors and teamwork!',
+    longDescription: 'Colour Clash is an exciting and vibrant competition where participants showcase their creativity through color-based challenges. Teams will complete fun and engaging tasks involving color coordination, artistic skills, and quick thinking. Bring your imagination and clash your way to victory!',
+    fee: 50,
+    date: 'March 11, 2026',
+    time: '11:00 AM',
+    duration: '1.5 Hours',
+    venue: 'On-Campus',
+    teamSize: 'Team of 2-4 Members',
+    rules: [
+        'Team participation (2-4 members)',
+        'All materials will be provided',
+        'Complete tasks within the given time',
+        'Judging based on creativity and teamwork',
+        'No unfair practices allowed'
+    ]
+},
+
+'ipl-auction': {
+    name: 'IPL Auction',
+    icon: '🏏',
+    category: 'non-technical',
+    registrationUrl: 'https://forms.gle/yourIPLAuctionLink',
+    description: 'Build your dream team and bid smartly!',
+    longDescription: 'Experience the thrill of an IPL-style auction! Participants will act as team owners and strategically bid on players within a fixed budget. The goal is to build the strongest possible team using smart decision-making, planning, and game strategy. The team with the best-balanced squad wins the title!',
+    fee: 100,
+    date: 'March 11, 2026',
+    time: '3:30 PM',
+    duration: '2 Hours',
+    venue: 'Seminar Hall',
+    teamSize: 'Team of 3-5 Members',
+    rules: [
+        'Team participation (3-5 members)',
+        'Each team gets a fixed virtual budget',
+        'Bidding must follow auction rules',
+        'No exceeding the allocated budget',
+        'Final evaluation based on team strength and balance'
+    ]
+},
 
     'vibe-coding': {
         name: 'Vibe Coding',
