@@ -1,0 +1,144 @@
+/* ============================================
+   NEON HEXAGONS - AURORA EDITION
+   Optimized for performance, no blur filters
+   ============================================ */
+
+/* Container */
+.bg-hexagons {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Base Hexagon */
+.hexagon {
+    position: absolute;
+    opacity: 0.6;
+}
+
+.hexagon-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hexagon shape with neon glow */
+.hexagon-face {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    background: rgba(0, 229, 255, 0.05);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Hex 1 - Large Cyan (Top Right) */
+.hex-1 {
+    width: 120px;
+    height: 135px;
+    top: 10%;
+    right: 15%;
+    animation: hexFloat 20s ease-in-out infinite;
+}
+
+.hex-1 .hexagon-face {
+    border-color: rgba(0, 229, 255, 0.3);
+    background: rgba(0, 229, 255, 0.06);
+}
+
+/* Hex 2 - Medium Violet (Left) */
+.hex-2 {
+    width: 80px;
+    height: 90px;
+    top: 30%;
+    left: 10%;
+    animation: hexFloat 25s ease-in-out infinite reverse;
+}
+
+.hex-2 .hexagon-face {
+    border-color: rgba(124, 58, 237, 0.3);
+    background: rgba(124, 58, 237, 0.06);
+}
+
+/* Hex 3 - Small Pink (Top Center) */
+.hex-3 {
+    width: 60px;
+    height: 68px;
+    top: 15%;
+    left: 30%;
+    animation: hexFloat 18s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+.hex-3 .hexagon-face {
+    border-color: rgba(236, 72, 153, 0.25);
+    background: rgba(236, 72, 153, 0.05);
+}
+
+/* Hex 4 - Large Indigo (Bottom Left) */
+.hex-4 {
+    width: 100px;
+    height: 115px;
+    bottom: 20%;
+    left: 18%;
+    animation: hexFloat 22s ease-in-out infinite reverse;
+    animation-delay: -8s;
+}
+
+.hex-4 .hexagon-face {
+    border-color: rgba(99, 102, 241, 0.25);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+/* Hide extra hexagons */
+.hex-5,
+.hex-6,
+.hex-7,
+.hex-8 {
+    display: none;
+}
+
+/* Simple float animation */
+@keyframes hexFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+        opacity: 0.7;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hex-1 {
+        width: 80px;
+        height: 90px;
+    }
+
+    .hex-2,
+    .hex-3 {
+        display: none;
+    }
+
+    .hex-4 {
+        width: 60px;
+        height: 68px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-hexagons {
+        display: none;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hexagon {
+        animation: none !important;
+    }
+}

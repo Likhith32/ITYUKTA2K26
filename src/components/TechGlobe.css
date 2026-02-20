@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════════════
+   TECH GLOBE — 3D rotating icon sphere
+   Matches the reference image: large icons at front,
+   small faded icons at back, smooth globe rotation
+   ═══════════════════════════════════════════════════ */
+
+.tg-wrapper {
+    position: relative;
+    /* icons are absolute children */
+    width: 420px;
+    height: 420px;
+    flex-shrink: 0;
+    overflow: visible;
+    /* Subtle radial glow matching the dark blue bg in the reference */
+    background: radial-gradient(ellipse at center,
+            rgba(20, 10, 60, 0.45) 0%,
+            rgba(8, 8, 30, 0.25) 55%,
+            transparent 75%);
+    border-radius: 50%;
+}
+
+/* Each icon — position/size/opacity set by JS every frame */
+.tg-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform, opacity, font-size, filter;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.tg-icon i {
+    display: block;
+    /* Drop shadow for depth — matches the image's icon glow */
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+    transition: transform 0.15s ease;
+}
+
+.tg-icon:hover i {
+    transform: scale(1.3);
+    filter:
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .tg-wrapper {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 900px) {
+    .tg-wrapper {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .tg-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+}
