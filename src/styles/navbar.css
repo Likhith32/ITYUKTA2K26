@@ -455,9 +455,13 @@
         height: 50px;
     }
 
-    .nav-logo-img {
+    .brand-logo {
         width: 55px;
         height: 55px;
+    }
+
+    .brand-text {
+        font-size: 1.1rem;
     }
 
     .nav-logo-acm, .nav-logo-small {
@@ -465,18 +469,15 @@
     }
 
     .nav-toggle {
-        display: flex;
-        z-index: 2100; /* Above everything including nav-links */
+        display: none !important;
     }
 
     /* ── Floating Scrolled State ── */
     .navbar.scrolled {
-        height: 0;
-        background: transparent;
-        border-bottom: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        box-shadow: none;
+        height: 70px;
+        background: rgba(6, 6, 15, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     .navbar.scrolled::after {
@@ -485,102 +486,16 @@
 
     .navbar.scrolled .navbar-left,
     .navbar.scrolled .navbar-right > img {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translateY(-20px);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
     }
 
-    .navbar.scrolled .nav-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        background: rgba(6, 6, 25, 0.85);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(0, 229, 255, 0.4);
-        box-shadow: 
-            0 8px 32px rgba(0, 0, 0, 0.4),
-            0 0 15px rgba(0, 229, 255, 0.15);
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .navbar.scrolled .nav-toggle:hover {
-        transform: scale(1.1);
-        background: rgba(0, 229, 255, 0.1);
-        border-color: #00e5ff;
-    }
-
-    /* ── "3 Dots" Icon Style when Scrolled ── */
-    .navbar.scrolled .nav-toggle span {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        margin: 1px 0;
-    }
-
-    .navbar.scrolled .nav-toggle:not(.active) span:nth-child(1) { transform: translateY(0); }
-    .navbar.scrolled .nav-toggle:not(.active) span:nth-child(2) { opacity: 1; }
-    .navbar.scrolled .nav-toggle:not(.active) span:nth-child(3) { transform: translateY(0); }
+    /* Remove floating toggle logic since it's hidden */
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 75%;
-        max-width: 320px;
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 5rem 2rem 2rem;
-        background: rgba(6, 6, 15, 0.97);
-        backdrop-filter: blur(30px) saturate(1.5);
-        -webkit-backdrop-filter: blur(30px);
-        z-index: 2000; /* Must be higher than navbar container/logos */
-        border-left: 1px solid rgba(0, 229, 255, 0.1);
-        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.6);
-        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    /* Backdrop overlay when menu is open */
-    .nav-links.active~.nav-menu-backdrop,
-    .nav-menu-backdrop.active {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 99;
-    }
-
-    .nav-link {
-        font-size: 1rem;
-        padding: 0.85rem 1rem;
-        width: 100%;
-        border-radius: 12px;
-    }
-
-    .nav-link:hover {
-        background: rgba(0, 229, 255, 0.08);
-    }
-
-    .nav-link::after {
-        display: none;
-    }
-
-    .nav-cta {
-        margin-left: 0 !important;
-        margin-top: 1rem;
-        width: 100%;
-        justify-content: center;
-        text-align: center;
+        display: none !important;
     }
 
     .nav-desktop-cta {
@@ -602,7 +517,7 @@
 }
 
 @media (max-width: 480px) {
-    .nav-container {
+    .navbar-container {
         padding: 0 1rem;
     }
 
