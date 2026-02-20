@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const registrationOptions = [
     {
         icon: '⚡',
-        title: 'General Registration for 1 Day',
+        title: 'General Registration - 1 Day',
         price: '₹100',
       
         features: [
@@ -17,18 +17,18 @@ const registrationOptions = [
     },
     {
         icon: '🚀',
-        title: 'General Registration for 2 Days',
+        title: 'General Registration - 2 Days',
         price: '₹200',
        
         features: [
            
             
         ],
-        link: 'https://forms.gle/XrBwGQNZdMZY8mBE9',
+        link: 'https://forms.gle/Um8L8CyU2ZZ3Yrx7A',
     },
     {
         icon: '🏨',
-        title: 'General Registration with Accommodation for 1 Day',
+        title: 'General Registration with Accommodation - 1 Day',
         price: '₹300',
        features: [
         
@@ -38,13 +38,15 @@ const registrationOptions = [
     },
     {
         icon: '👑',
-        title: 'General Registration with Accommodation for 2 Days',
+        title: 'General Registration with Accommodation - 2 Days',
         price: '₹500',
        features: [
        
         
     ],
-        link: 'https://forms.gle/VdY1DyvQ5y9PPCh2A',
+            link: 'https://forms.gle/XrBwGQNZdMZY8mBE9',
+
+        
     },
 ]
 
@@ -80,16 +82,14 @@ function TiltCard({ option }) {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            {option.popular && <div className="register-badge">Most Popular</div>}
-            <div className="register-icon">{option.icon}</div>
-            <h3>{option.title}</h3>
-            <p className="register-desc">{option.desc}</p>
-            <div className="register-price">{option.price}</div>
-            <ul className="register-features">
-                {option.features.map((f, i) => (
-                    <li key={i}>✔ {f}</li>
-                ))}
-            </ul>
+            <div className="card-content">
+                <div className="register-icon">{option.icon}</div>
+                <h3>{option.title}</h3>
+                <div className="price-wrapper">
+                    <img src="/images/blast.png" className="price-blast" alt="Price Tag" />
+                    <span className="price-text">{option.price}</span>
+                </div>
+            </div>
             <button className="register-btn">Register Now →</button>
         </a>
     )
@@ -106,8 +106,7 @@ export default function RegisterPage() {
                         Register for <span className="gradient-text">ITYUKTA 2K26</span>
                     </h1>
                     <p className="register-subtext">
-                        Choose your pass and secure your seat now. Limited slots available.
-                    </p>
+                                            </p>
 
                     <div className="register-grid">
                         {registrationOptions.map((option, index) => (

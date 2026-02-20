@@ -67,7 +67,10 @@ export default function EventsPage() {
                                     <span>👥 {ev.teamSize}</span>
                                 </div>
                                 <div className="event-footer">
-                                    <span className="event-price">{ev.fee === 0 ? 'Free Entry' : `₹${ev.fee}`}</span>
+                                    <div className="event-price-row">
+                                        <span className="event-price">{ev.fee === 0 ? 'Free Entry' : `₹${ev.fee}`}</span>
+                                        {ev.fee !== 0 && <span className="per-person">per person</span>}
+                                    </div>
                                     <span className="event-register-btn">
                                         View Details
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

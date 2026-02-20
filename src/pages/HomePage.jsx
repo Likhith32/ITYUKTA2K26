@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { EVENTS } from '../data/events'
 import Navbar from '../components/Navbar'
 
@@ -26,11 +26,12 @@ import sarojImg from '../assets/Saroj.jpeg'
 import deekshithaImg from '../assets/deekshitha.jpeg'
 import jkImg from '../assets/jk.jpeg'
 import dharaniImg from '../assets/dharani.jpeg'
+import sravanImg from '../assets/sravan.jpeg'
 
 
 /* ──────────── DATA ──────────── */
 const TEAM_MEMBERS = [
-    { name: "P. Sravan Kumar", role: "Treasurer", img: null },
+    { name: "P. Sravan Kumar", role: "Treasurer", img: sravanImg },
     { name: "M. Likhith Kumar", role: "Tech Co-ordinator", img: likhithImg },
     { name: "Kundum Pravallika", role: "Tech Co-ordinator", img: praviImg },
     { name: "B. Hema Sagar", role: "Non-Tech Co-ordinator", img: sagarImg },
@@ -49,7 +50,7 @@ const TEAM_MEMBERS = [
 
 const GUESTS = [
     { img: '/images/vice_chancelor.jpeg', name: 'Prof. V. V. Subba Rao', title: "Hon'ble Vice Chancellor", org: 'JNTU-GV, Vizianagaram' },
-    { img: '/images/jaya_suma.png', name: 'Prof. G. Jayasuma', title: "Registrar", org: 'JNTU-GV, Vizianagaram' },
+    { img: '/images/jaya_suma.png', name: 'Dr. G. Jayasuma', title: "Professor of IT &Registrar", org: 'JNTU-GV, Vizianagaram' },
 ]
 const PATRONS = [
     { img: '/images/principal.2ea2f33ffe16c6117209.jpeg', name: 'Prof. R. Rajeswara Rao', title: 'Principal(I/C)', org: 'JNTU-GV College of Engineering\nVizianagaram(A)' },
@@ -58,15 +59,15 @@ const PATRONS = [
 const FACULTY = [
     { img: '/images/tirimula_rao.png', name: 'Dr.B.Tirimula Rao', role: 'Associate Professor' },
     { img: '/images/anil.jpeg', name: 'Mr.W.Anil', role: 'Assistant Professor' },
-    { img: '/images/roje_mam.png', name: 'Mrs.R.Roje Spandana', role: 'Assistant Professor' },
-    { img: '/images/manasa.png', name: 'Mrs.B.Manasa', role: 'Assistant Professor' },
+    { img: '/images/roje_mam.png', name: 'Mrs.R.Roje Spandana', role: 'Assistant Professor(C)' },
+    { img: '/images/manasa.png', name: 'Mrs.B.Manasa', role: 'Assistant Professor(C)' },
 
-    { img: '/images/madhumitha.jpeg', name: 'Mrs.Madhumitha Chanda', role: 'Assistant Professor' },
-    { img: '/images/geetha_madhuri.jpeg', name: 'Mrs.M.Geetha Madhuri Yadav', role: 'Assistant Professor' },
+    { img: '/images/madhumitha.jpeg', name: 'Mrs.Madhumitha Chanda', role: 'Assistant Professor(C)' },
+    { img: '/images/geetha_madhuri.jpeg', name: 'Mrs.M.Geetha Madhuri Yadav', role: 'Assistant Professor(C)' },
 ]
 const FACULTY_COORDINATORS = [
     { img: '/images/bindu_madhuri.png', name: 'Dr.Ch.Bindu Madhuri', role: 'Associate Professor & HOD IT' },
-    { img: srikanthSirImg, name: 'Dr.K.Srikanth',role: 'Assistant Professor(Contract)' },
+    { img: srikanthSirImg, name: 'Dr.K.Srikanth',role: 'Assistant Professor(C)' },
 ]
 const COORDINATORS = [
     { img: dassImg, name: 'Y.G.S.Karthik', role: 'Fest Co-ordinator', contact: '9182888062', instagram: 'https://www.instagram.com/y._g.s.karthik_chowdary?igsh=OW51NWZlNHdraTlu' },
@@ -206,6 +207,7 @@ export default function HomePage() {
     const [preloaderFade, setPreloaderFade] = useState(false)
     const [countdown, setCountdown] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' })
     const [activeFilter, setActiveFilter] = useState('technical')
+    const navigate = useNavigate()
     const [activeDay, setActiveDay] = useState(1)
     const [activeFaq, setActiveFaq] = useState(-1)
     const [scrollProgress, setScrollProgress] = useState(0)
@@ -431,11 +433,13 @@ export default function HomePage() {
                     <div className="hud-badge"><span className="hud-dot"></span><span className="hud-text">PROTOCOL_ACTIVE // NATIONAL_SYMPOSIUM</span></div>
                     <h1 className="hero-title-main shine"><span className="title-gradient">ITYUKTA</span></h1>
                     <h2 className="hero-title-year">2K26</h2>
-                    <p className="hero-tagline-code">
-                        <span className="tagline-word">Innovate</span><span className="tagline-dot"></span><span className="tagline-sep">|</span>
-                        <span className="tagline-word">Build</span><span className="tagline-dot"></span><span className="tagline-sep">|</span>
-                        <span className="tagline-word">Conquer</span><span className="tagline-dot"></span>
-                    </p>
+                    <h2 className="tagline">
+                        <span className="innovate">Innovate</span>
+                        <span className="divider">|</span>
+                        <span className="build">Build</span>
+                        <span className="divider">|</span>
+                        <span className="conquer">Conquer</span>
+                    </h2>
                     <p className="hero-tagline">A Two Day National Level Technical Symposium</p>
                     <div className="hero-actions">
                         <Link to="/register" className="btn btn-hero-primary shine-fast">
@@ -478,8 +482,7 @@ export default function HomePage() {
         </h2>
 
         <p className="reveal">
-          ITYUKTA, meaning "well-connected" and "skillfully engaged," embodies a vision of technological empowerment, collaboration, and limitless learning. Guided by the mantra “Igniting Ideas, Empowering Innovation,” ITYUKTA 2k26 is a melting pot of creativity and technology, bringing together bright minds to explore the ever-evolving digital landscape.With flagship workshops on Vibe Coding, and Agentic AI, ITYUKTA 2k26 equips students with cutting-edge skills, transforming theoretical knowledge into real-world expertise. It serves as a launchpad for innovators, problem-solvers, and tech enthusiasts, bridging the gap between academia and industry.It is more than an event—it is a movement that fuels passion, sharpens skills, and nurtures future leaders in technology.Join us at ITYUKTA 2k26 on March 11th and 12th, where ideas take flight, knowledge turns into action, and innovation drives the future! 
-        </p>
+ITYUKTA is not just an event — it is an Innovation Hub where technology empowers, collaboration thrives, and young minds ignite with creativity. It provides students with a dynamic platform to explore current trends and transform themselves through emerging technologies. Beyond being a space for technical learning, ITYUKTA fosters excitement, creativity, and complete fun, creating an environment where innovation and enthusiasm go hand in hand. Through its diverse events and engaging activities, ITYUKTA enhances students’ technical skills while nurturing teamwork, leadership, and problem-solving abilities. ITYUKTA 2K26 equips participants with cutting-edge competencies, transforming theoretical knowledge into real-world expertise and serving as a launchpad for innovators, tech enthusiasts, and future industry leaders. By bridging the gap between academia and industry, ITYUKTA stands as a place where ideas flourish, knowledge turns into action, and innovation drives the future.        </p>
 
         <div className="about-vision-box reveal">
           <h4 className="about-vision-label">Our_Vision</h4>
@@ -561,7 +564,7 @@ export default function HomePage() {
                         </div>
                         <div className="chairperson-info">
                             <h3 className="chairperson-name">Dr.Ch.Bindu Madhuri</h3>
-                            <p className="chairperson-title">Associate Professor and Head of the Department</p>
+                            <p className="chairperson-title">Associate Professor & Head of the Department</p>
                             <p className="chairperson-org"></p>
                         </div>
                     </div>
@@ -669,7 +672,7 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
 
             {/* Workshops */}
             <section className="section" id="workshops">
@@ -719,7 +722,7 @@ export default function HomePage() {
                         <div className="combo-badge">🔥 Limited Time Offer</div>
 
                         <h2 className="combo-title shine-slow">
-                            Grab The <span className="gradient-text">Combo Offer</span>
+                            Grab The <span className="gradient-text">Combo Offer for Workshops</span>
                         </h2>
 
                         <p className="combo-description">
@@ -763,14 +766,23 @@ export default function HomePage() {
                     </div>
                     <div className="events-grid">
                         {filteredEvents.map((ev, idx) => (
-                            <Link key={ev.slug} to={`/event/${ev.slug}`} className="event-card reveal" data-category={ev.cat} style={{ transitionDelay: `${idx * 0.1}s` }}>
+                            <div
+                                key={ev.slug}
+                                className="event-card reveal"
+                                onClick={() => navigate(`/event/${ev.slug}`)}
+                                data-category={ev.cat}
+                                style={{ transitionDelay: `${idx * 0.1}s`, cursor: 'pointer' }}
+                            >
                                 <div className="event-icon">{ev.icon}</div>
-                                <div className="event-category">{ev.cat === 'technical' ? 'Technical' : 'Non-Technical'}</div>
+                               
                                 <h3>{ev.title}</h3>
                                 <p>{ev.desc}</p>
                                 <div className="event-meta">{ev.meta.map((m, i) => <span key={i}>{m}</span>)}</div>
                                 <div className="event-footer">
-                                    <span className="event-price">₹{ev.fee}</span>
+                                    <div className="event-price-row">
+                                        <span className="event-price">₹{ev.fee}</span>
+                                        <span className="per-person">per person</span>
+                                    </div>
                                     <a
                                         href={ev.registrationUrl}
                                         target="_blank"
@@ -782,7 +794,7 @@ export default function HomePage() {
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                                     </a>
                                 </div>
-                            </Link>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -834,9 +846,12 @@ export default function HomePage() {
                             </p>
 
                             <div className="culture-meta">
-                                <span>📅 11th March</span>
-                                <span>⏰ 6:00 PM</span>
-                            </div>
+    <span>
+        📅 11<sup>th</sup> March ’26
+    </span>
+    <span>⏰ 6:00 PM</span>
+</div>
+
                         </div>
 
                     </div>
@@ -856,10 +871,13 @@ export default function HomePage() {
                                 As the beats dropped, dancers emerged from the crowd, transforming an ordinary moment into an extraordinary spectacle.
                             </p>
 
-                            <div className="culture-meta">
-                                <span>📅 12th March</span>
-                                <span>⏰ 5:00 PM</span>
-                            </div>
+                           <div className="culture-meta">
+    <span>
+        📅 12<sup>th</sup> March ’26
+    </span>
+    <span>⏰ 6:00 PM</span>
+</div>
+
                         </div>
 
                         {/* IMAGE RIGHT */}
@@ -923,8 +941,8 @@ export default function HomePage() {
 
                         {/* PIXEL PERFECT */}
                         <div className="pre-event-card reveal">
-                            <h3>🎨 Pixel Perfect</h3>
-                            <p>Design & creativity challenge</p>
+                            <h3>📸 Snap Storm</h3>
+                            <p>Post your best photos and win</p>
                             <div className="coming-soon">
                                 Registrations Will Open Soon 🚀
                             </div>
