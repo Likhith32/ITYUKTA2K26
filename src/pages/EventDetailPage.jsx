@@ -41,7 +41,13 @@ export default function EventDetailPage() {
 
                     {/* Header */}
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <div style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '1.25rem' }}>{event.icon}</div>
+                        <div style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '1.25rem' }}>
+                            {event.icon && event.icon.startsWith('fa-') ? (
+                                <i className={event.icon}></i>
+                            ) : (
+                                event.icon
+                            )}
+                        </div>
                         <span style={{ display: 'inline-block', padding: '0.4rem 1.25rem', borderRadius: '30px', background: isWorkshop ? 'rgba(16,185,129,0.15)' : 'rgba(0,229,255,0.1)', color: isWorkshop ? '#34d399' : 'var(--accent-primary)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem' }}>
                             {event.category}
                         </span>

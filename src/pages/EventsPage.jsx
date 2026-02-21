@@ -58,7 +58,13 @@ export default function EventsPage() {
                                 data-category={ev.category}
                                 style={{ transitionDelay: `${idx * 0.05}s` }}
                             >
-                                <div className="event-icon">{ev.icon}</div>
+                                <div className="event-icon">
+                                    {ev.icon && ev.icon.startsWith('fa-') ? (
+                                        <i className={ev.icon}></i>
+                                    ) : (
+                                        ev.icon
+                                    )}
+                                </div>
                                 <div className="event-category">{ev.category.charAt(0).toUpperCase() + ev.category.slice(1)}</div>
                                 <h3>{ev.name}</h3>
                                 <p>{ev.description}</p>

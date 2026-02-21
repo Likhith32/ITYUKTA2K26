@@ -483,7 +483,7 @@ export default function HomePage() {
         </h2>
 
         <p className="reveal">
-ITYUKTA is not just an event — it is an Innovation Hub where technology empowers, collaborates & ignites with the minds of students. Ityukta makes students to learn the current trends and innovates themselves with the recent trends. ITYUKTA is not only a place to learn the technology but also filled with complete fun and to enhance student technical skills with events conducted in the ITYUKTA.ITYUKTA 2k26 equips students with cutting-edge skills, transforming theoretical knowledge into real-world expertise. It serves as a launchpad for innovators, problem-solvers, and tech enthusiasts, bridging the gap between academia and industry.ITYUKTA is a place flurish turns the knowledge into action & innovation dives the future!        </p>
+ITYUKTA is not just an event — it is an Innovation Hub where technology empowers, collaborates and ignites with the minds of students. ITYUKTA makes students to learn the current trends and innovate themselves with the recent trends. ITYUKTA is not only a place to learn the technology but also filled with complete fun and to enhance student technical skills with events conducted.ITYUKTA 2k26 equips students with cutting-edge skills, transforming theoretical knowledge into real-world expertise. It serves as a launch-pad for innovators, problem-solvers, and tech enthusiasts, bridging the gap between academia and industry.ITYUKTA is a place to flurish which turns the knowledge into action and innovation dives the future!        </p>
 
         <div className="about-vision-box reveal">
           <h4 className="about-vision-label">Our_Vision</h4>
@@ -736,7 +736,7 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                         </div>
 
                         <a
-                            href="https://forms.gle/fLRQovf9H565ec286"
+                            href="https://forms.gle/BoSb3zYU8y3Pc7sr9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-primary combo-cta-btn shine-fast"
@@ -774,7 +774,13 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                                 data-category={ev.cat}
                                 style={{ transitionDelay: `${idx * 0.1}s`, cursor: 'pointer' }}
                             >
-                                <div className="event-icon">{ev.icon}</div>
+                                <div className="event-icon">
+                                    {ev.icon && ev.icon.startsWith('fa-') ? (
+                                        <i className={ev.icon}></i>
+                                    ) : (
+                                        ev.icon
+                                    )}
+                                </div>
                                
                                 <h3>{ev.title}</h3>
                                 <p>{ev.desc}</p>

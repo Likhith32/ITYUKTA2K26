@@ -121,10 +121,10 @@ export const EVENTS = {
 
   'steady-wins': {
     name: 'Steady Wins',
-    icon: '🍾',
+    icon: 'fa-solid fa-bottle-water',
     category: 'non-technical',
     currency: 'INR',
-    registrationUrl: 'https://forms.gle/yourBottleEventLink',
+    registrationUrl: 'https://forms.gle/rzd85rxmDjsjCpdC9',
     description: 'Bottle placement teamwork challenge.',
     longDescription:
       'Teams must place a bottle at a distance without letting it fall.',
@@ -145,7 +145,7 @@ export const EVENTS = {
     icon: '🎬',
     category: 'non-technical',
     currency: 'INR',
-    registrationUrl: 'https://forms.gle/fYe4zPF6RxT8fDk47',
+    registrationUrl: 'https://forms.gle/eAW3KZnS54EJPtkt6',
     description: 'Movie-based fun challenges.',
     longDescription:
       'Guess movies, identify songs, and act famous scenes.',
@@ -188,7 +188,7 @@ export const EVENTS = {
     icon: '🎨',
     category: 'non-technical',
     currency: 'INR',
-    registrationUrl: 'https://forms.gle/yourColourClashLink',
+    registrationUrl: 'https://forms.gle/WWH6r1RF8TX1Z1ru5',
     description: 'Fast color-response challenge.',
     longDescription:
       'Arrange colours in correct sequence quickly.',
@@ -229,7 +229,7 @@ export const EVENTS = {
     icon: '🏏',
     category: 'non-technical',
     currency: 'INR',
-    registrationUrl: 'https://forms.gle/yourIPLAuctionLink',
+    registrationUrl: 'https://forms.gle/LoHR8HoupDANMj488',
     description: 'Strategic team-building auction event.',
     longDescription:
       'Teams bid for players within a fixed virtual budget.',
