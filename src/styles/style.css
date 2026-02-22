@@ -6639,7 +6639,7 @@ a.event-card {
 
 .carousel-wrapper {
     position: relative;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -6653,7 +6653,7 @@ a.event-card {
 
 .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     width: max-content;
 }
 
@@ -6683,7 +6683,7 @@ a.event-card {
 
 .carousel-card {
     position: relative;
-    width: 250px;
+    width: 240px;
     height: 300px;
     border-radius: 20px;
     overflow: hidden;

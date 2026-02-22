@@ -28,19 +28,20 @@ import jkImg from '../assets/jk.jpeg'
 import dharaniImg from '../assets/dharani.jpeg'
 import sravanImg from '../assets/sravan.jpeg'
 import shabiraImg from '../assets/shabira.jpeg'
+import hemanthImg from '../assets/hemanth.jpeg'
 
 
 /* ──────────── DATA ──────────── */
 const TEAM_MEMBERS = [
     { name: "P. Sravan Kumar", role: "Treasurer", img: sravanImg },
+    { name: "Deekshitha", role: "Treasurer", img: deekshithaImg },
     { name: "M. Likhith Kumar", role: "Tech Co-ordinator", img: likhithImg },
     { name: "Kundum Pravallika", role: "Tech Co-ordinator", img: praviImg },
     { name: "B. Hema Sagar", role: "Non-Tech Co-ordinator", img: sagarImg },
     { name: "Lavanya", role: "Non-Tech Co-ordinator", img: lavanyaImg },
     { name: "Jayakumar", role: "Flash Mob Co-ordinator", img: jkImg },
-    { name: "Deekshitha", role: "Flash Mob Co-ordinator", img: deekshithaImg },
     { name: "Shabira", role: "Flash Mob Co-ordinator", img: shabiraImg },
-    { name: "Hemanth", role: "Flash Mob Co-ordinator", img: null },
+    { name: "Hemanth", role: "Flash Mob Co-ordinator", img: hemanthImg },
     { name: "Dharani", role: "Flash Mob Co-ordinator", img: dharaniImg },
     { name: "Surendar Reddy", role: "Cultural Co-ordinator", img: suriImg },
     { name: "Saroj", role: "Cultural Co-ordinator", img: sarojImg },
@@ -135,7 +136,7 @@ const GLOBE_TAGS = [
 /* ──────────── TEAM CAROUSEL ──────────── */
 function TeamCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const cardWidth = 270 // 250px card + 20px gap
+    const cardWidth = 255 // 240px card + 15px gap
 
     const next = useCallback(() => {
         setCurrentIndex(prev => (prev + 1) % TEAM_MEMBERS.length)
@@ -920,28 +921,14 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                                 <span className="badge completed-badge">Completed ✅</span>
                             </div>
 
-                            <div className="event-phase live">
+                            <div className="event-phase completed">
                                 <span>Code Krack 2.0</span>
-                                <span className="badge live-badge">Live Now 🔥</span>
+                                <span className="badge completed-badge">Completed ✅</span>
                             </div>
-
-                            <a
-                                href="https://forms.gle/Vmr3ZxB2PqnGbmbA7"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="register-btn"
-                            >
-                                Register Now
-                            </a>
 
                             <div className="event-phase upcoming">
                                 <span>Code Krack 3.0</span>
-                                <span className="badge upcoming-badge">Releasing Soon ⏳</span>
-                            </div>
-
-                            <div className="event-phase upcoming">
-                                <span>Code Krack 4.0</span>
-                                <span className="badge upcoming-badge">Releasing Soon ⏳</span>
+                                <span className="badge upcoming-badge">8th March ⏳</span>
                             </div>
                         </div>
 
