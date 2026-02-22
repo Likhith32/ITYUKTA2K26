@@ -65,7 +65,7 @@ export default function Navbar() {
 
                         <div className="brand">
                             <img src="/images/LOGOFINAL (1).png" alt="ITYUKTA" className="brand-logo" />
-                            <span className="brand-text">ITYUKTA 2K26</span>
+                            <span className="brand-text"></span>
                         </div>
                     </div>
 

@@ -6758,14 +6758,23 @@ a.event-card {
 }
 
 @media (max-width: 600px) {
+    .carousel-wrapper {
+        gap: 0.5rem;
+    }
+
     .carousel-card {
-        width: 200px;
-        height: 250px;
+        width: calc(100vw - 130px);
+        height: 380px;
     }
 
     .carousel-btn {
         width: 36px;
         height: 36px;
+    }
+
+    .carousel-img img {
+        object-fit: cover;
+        object-position: top center;
     }
 }
 

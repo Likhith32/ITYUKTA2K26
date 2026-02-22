@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { EVENTS } from '../data/events'
 import Navbar from '../components/Navbar'
@@ -136,7 +136,8 @@ const GLOBE_TAGS = [
 /* ──────────── TEAM CAROUSEL ──────────── */
 function TeamCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const cardWidth = 255 // 240px card + 15px gap
+    const [cardWidth, setCardWidth] = useState(255)
+    const viewportRef = useRef(null)
 
     const next = useCallback(() => {
         setCurrentIndex(prev => (prev + 1) % TEAM_MEMBERS.length)
@@ -144,6 +145,30 @@ function TeamCarousel() {
 
     const prev = useCallback(() => {
         setCurrentIndex(prev => (prev - 1 + TEAM_MEMBERS.length) % TEAM_MEMBERS.length)
+    }, [])
+
+    useEffect(() => {
+        const updateWidth = () => {
+            if (viewportRef.current) {
+                const card = viewportRef.current.querySelector('.carousel-card')
+                if (card) {
+                    const style = window.getComputedStyle(card)
+                    const margin = parseFloat(style.marginRight) || 0
+                    const trackStyle = window.getComputedStyle(card.parentElement)
+                    const gap = parseFloat(trackStyle.gap) || margin
+                    const width = card.offsetWidth + gap
+                    setCardWidth(width)
+                }
+            }
+        }
+        updateWidth()
+        // Small delay to ensure styles are applied
+        const timer = setTimeout(updateWidth, 100)
+        window.addEventListener('resize', updateWidth)
+        return () => {
+            window.removeEventListener('resize', updateWidth)
+            clearTimeout(timer)
+        }
     }, [])
 
     useEffect(() => {
@@ -168,7 +193,7 @@ function TeamCarousel() {
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" /></svg>
                     </button>
 
-                    <div className="carousel-viewport">
+                    <div className="carousel-viewport" ref={viewportRef}>
                         <div
                             className="carousel-track"
                             style={{
