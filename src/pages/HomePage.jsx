@@ -958,13 +958,21 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                         </div>
 
 
-                        {/* PIXEL PERFECT */}
+                        {/* SNAP STORM */}
                         <div className="pre-event-card reveal">
                             <h3>📸 Snap Storm</h3>
                             <p>Post your best photos and win</p>
-                            <div className="coming-soon">
-                                Registrations Will Open Soon 🚀
+                            <div className="snap-storm-status">
+                                <span className="registrations-open-text">Registrations Open 🎉</span>
                             </div>
+                            <a
+                                href="https://forms.gle/CrKWvQ4DBNHzWzW67"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="snap-storm-register-btn"
+                            >
+                                Register for Snap Storm 🚀
+                            </a>
                         </div>
 
 
