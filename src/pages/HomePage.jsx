@@ -392,12 +392,7 @@ export default function HomePage() {
     const handleFilter = useCallback((filter) => setActiveFilter(filter), [])
     const filteredEvents = EVENT_CARDS_LIST.filter(e => e.cat === activeFilter)
 
-    const handleContactSubmit = (e) => {
-        e.preventDefault()
-        const formData = new FormData(e.target)
-        alert(`Thank you ${formData.get('name')}! Your message has been sent. We'll get back to you soon.`)
-        e.target.reset()
-    }
+
 
     return (
         <>
@@ -587,10 +582,10 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                     </div>
                     <div className="chairperson-card reveal">
                         <div className="chairperson-image-wrap">
-                            <img src="/images/bindu_madhuri.png" alt="Dr.Ch.Bindu Madhuri" className="chairperson-image" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                            <img src="/images/tirimula_rao.png" alt="Tirumala Rao" className="chairperson-image" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                         </div>
                         <div className="chairperson-info">
-                            <h3 className="chairperson-name">Dr.Ch.Bindu Madhuri</h3>
+                            <h3 className="chairperson-name">Tirumala Rao</h3>
                             <p className="chairperson-title">Associate Professor & Head of the Department</p>
                             <p className="chairperson-org"></p>
                         </div>
@@ -980,9 +975,17 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                         <div className="pre-event-card reveal">
                             <h3>🧠 Matrix Mind</h3>
                             <p>Logic & problem solving competition</p>
-                            <div className="coming-soon">
-                                Registrations Will Open Soon 🚀
+                            <div className="snap-storm-status">
+                                <span className="registrations-open-text">Registrations Open 🎉</span>
                             </div>
+                            <a
+                                href="https://forms.gle/zMWoNJ5DYSvGsz4k6"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="snap-storm-register-btn"
+                            >
+                                Register for Mind Matrix 🚀
+                            </a>
                         </div>
 
 
@@ -1074,7 +1077,7 @@ ITYUKTA is not just an event — it is an Innovation Hub where technology empowe
                         </div>
                         <div className="footer-column"><h4>Quick Links</h4><ul><li><a href="https://forms.gle/fLRQovf9H565ec286" target="_blank" rel="noopener noreferrer">&gt; Registration for Workshop</a></li><li><a href="https://forms.gle/BAcL2WPXVsBCrWqA9" target="_blank" rel="noopener noreferrer">&gt; Registration for Tech Events</a></li><li><a href="https://forms.gle/fYe4zPF6RxT8fDk47" target="_blank" rel="noopener noreferrer">&gt; Registration for Non-Tech Events</a></li><li><a href="https://forms.gle/fYe4zPF6RxT8fDk47" target="_blank" rel="noopener noreferrer">&gt; Registration for Accommodation</a></li></ul></div>
 
-                        <div className="footer-column"><h4>Events</h4><ul><li><Link to="/event/mind-matrix">&gt; Mind Matrix</Link></li><li><Link to="/event/twin-lock">&gt; Twin Lock</Link></li><li><Link to="/event/shadow-pages">&gt; Shadow Pages</Link></li><li><Link to="/event/runtime-rush">&gt; Runtime Rush</Link></li><li><Link to="/event/dive-n-design">&gt; Dive N Design</Link></li><li><Link to="/event/treasure-hunt">&gt; Treasure Hunt</Link></li><li><Link to="/event/meme-matrice">&gt; Meme Matrice</Link></li><li><Link to="/event/movie-mania">&gt; Movie Mania</Link></li><li><Link to="/event/dumb-smash">&gt; Dumb Smash</Link></li><li><Link to="/event/ludo">&gt; Ludo</Link></li></ul></div>
+                        <div className="footer-column"><h4>Events</h4><ul><li><Link to="/event/twin-lock">&gt; Twin Lock</Link></li><li><Link to="/event/shadow-pages">&gt; Shadow Pages</Link></li><li><Link to="/event/runtime-rush">&gt; Runtime Rush</Link></li><li><Link to="/event/dive-n-design">&gt; Dive N Design</Link></li><li><Link to="/event/treasure-hunt">&gt; Treasure Hunt</Link></li><li><Link to="/event/meme-matrice">&gt; Meme Matrice</Link></li><li><Link to="/event/movie-mania">&gt; Movie Mania</Link></li><li><Link to="/event/dumb-smash">&gt; Dumb Smash</Link></li><li><Link to="/event/ludo">&gt; Ludo</Link></li></ul></div>
                         <div className="footer-column"><h4>Social Media</h4><ul><li><a href="https://www.instagram.com/ityukta_2k26?igsh=bTJuYjlucGZua25t" target="_blank" rel="noopener noreferrer">&gt; Instagram</a></li><li><a href="https://youtube.com/@ityukta2k25?si=VCtfE7sa9vOjWpdV" target="_blank" rel="noopener noreferrer">&gt; YouTube</a></li><li><a href="https://www.linkedin.com/in/ityukta-6096883b0/" target="_blank" rel="noopener noreferrer">&gt; LinkedIn</a></li></ul></div>
                     </div>
                     <div className="footer-bottom">

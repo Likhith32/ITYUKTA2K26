@@ -50,7 +50,6 @@ export default function Footer({ minimal = false }) {
                     <div className="footer-links">
                         <h4>{'>'} Events</h4>
                         <ul>
-                            <li><Link to="/events/mind-matrix">{'>'} Mind Matrix</Link></li>
                             <li><Link to="/events/twin-lock">{'>'} Twin Lock</Link></li>
                             <li><Link to="/events/shadow-pages">{'>'} Shadow Pages</Link></li>
                             <li><Link to="/events/runtime-rush">{'>'} Runtime Rush</Link></li>

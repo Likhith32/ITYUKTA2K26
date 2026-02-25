@@ -95,7 +95,6 @@ export const EVENTS = {
     venue: 'IT Block - Lab 4',
     teamSize: 'Team of 2'
   },
-
   /* ================= NON-TECHNICAL EVENTS ================= */
 
   'treasure-hunt': {
