@@ -37,30 +37,7 @@ export default function Footer({ minimal = false }) {
                             📧 <a href="mailto:ityukta2k26@gmail.com" style={{ color: '#00e5ff' }}>ityukta2k26@gmail.com</a>
                         </p>
                     </div>
-                    <div className="footer-links">
-                        <h4>{'>'} Quick_Links</h4>
-                        <ul>
-                            <li><a href="https://forms.gle/fLRQovf9H565ec286" target="_blank" rel="noopener noreferrer">{'>'} Registration for Workshop</a></li>
-                            <li><a href="https://forms.gle/BAcL2WPXVsBCrWqA9" target="_blank" rel="noopener noreferrer">{'>'} Registration for Tech Events</a></li>
-                            <li><a href="https://forms.gle/fYe4zPF6RxT8fDk47" target="_blank" rel="noopener noreferrer">{'>'} Registration for Non_Tech Events</a></li>
-                            <li><a href="https://forms.gle/fYe4zPF6RxT8fDk47" target="_blank" rel="noopener noreferrer">{'>'} Registration for Accommodation</a></li>
-
-                        </ul>
-                    </div>
-                    <div className="footer-links">
-                        <h4>{'>'} Events</h4>
-                        <ul>
-                            <li><Link to="/events/twin-lock">{'>'} Twin Lock</Link></li>
-                            <li><Link to="/events/shadow-pages">{'>'} Shadow Pages</Link></li>
-                            <li><Link to="/events/runtime-rush">{'>'} Runtime Rush</Link></li>
-                            <li><Link to="/events/dive-n-design">{'>'} Dive N Design</Link></li>
-                            <li><Link to="/events/treasure-hunt">{'>'} Treasure Hunt</Link></li>
-                            <li><Link to="/events/meme-matrice">{'>'} Meme Matrice</Link></li>
-                            <li><Link to="/events/movie-mania">{'>'} Movie Mania</Link></li>
-                            <li><Link to="/events/dumb-smash">{'>'} Dumb Smash</Link></li>
-                            <li><Link to="/events/ludo">{'>'} Ludo</Link></li>
-                        </ul>
-                    </div>
+                    
                     <div className="footer-links">
                         <h4>{'>'} Social_Node</h4>
                         <ul>
